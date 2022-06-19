@@ -15,7 +15,7 @@ struct NumButtonView: View {
         switch numpad {
         case .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .zero, .point, .remove:
             return .colorTheme.number
-        case .divide, .equally, .multiply, .minus, .plus:
+        case .divide, .equal, .multiply, .minus, .plus:
             return .colorTheme.operators
         case .c, .plusMinus, .percent:
             return .colorTheme.functional

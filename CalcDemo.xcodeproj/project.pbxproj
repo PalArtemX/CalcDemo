@@ -17,6 +17,7 @@
 		F86C272F285F29F9001689A8 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C272E285F29F8001689A8 /* ColorExtension.swift */; };
 		F86C2731285F530E001689A8 /* NumberFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C2730285F530E001689A8 /* NumberFieldView.swift */; };
 		F87807A8285F94220057878C /* CalcVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87807A7285F94220057878C /* CalcVM.swift */; };
+		F87807AA285F99970057878C /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87807A9285F99970057878C /* Operations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		F86C272E285F29F8001689A8 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		F86C2730285F530E001689A8 /* NumberFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFieldView.swift; sourceTree = "<group>"; };
 		F87807A7285F94220057878C /* CalcVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcVM.swift; sourceTree = "<group>"; };
+		F87807A9285F99970057878C /* Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				F86C2725285F287D001689A8 /* NumPad.swift */,
+				F87807A9285F99970057878C /* Operations.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F87807AA285F99970057878C /* Operations.swift in Sources */,
 				F86C2726285F287D001689A8 /* NumPad.swift in Sources */,
 				F86C272D285F2986001689A8 /* NumButtonView.swift in Sources */,
 				F86C2728285F28FF001689A8 /* MainView.swift in Sources */,

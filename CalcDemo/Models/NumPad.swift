@@ -11,7 +11,7 @@ import Foundation
 enum NumPad: String, CaseIterable {
     case one = "1", two = "2", three = "3", four = "4", five = "5", six = "6", seven = "7", eight = "8", nine = "9", zero = "0"
     case plus = "+", minus = "-", multiply = "*", divide = "/"
-    case equally = "=", percent = "%", c = "c", plusMinus = "+/-", point = ".", remove = "remove"
+    case equal = "=", percent = "%", c = "c", plusMinus = "+/-", point = ".", remove = "remove"
     
     
     // MARK: - systemName
@@ -45,7 +45,7 @@ enum NumPad: String, CaseIterable {
             return "multiply.circle"
         case .divide:
             return "divide.circle"
-        case .equally:
+        case .equal:
             return "equal.circle"
         case .percent:
             return "percent"
@@ -67,7 +67,7 @@ enum NumPad: String, CaseIterable {
         [.seven, .eight,     .nine,    .multiply],
         [.four,  .five,      .six,     .minus],
         [.one,   .two,       .three,   .plus],
-        [.zero,  .point,     .remove,  .equally]
+        [.zero,  .point,     .remove,  .equal]
     ]
     
     
