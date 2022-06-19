@@ -13,6 +13,7 @@ enum NumPad: CaseIterable {
     case plus, minus, multiply, divide
     case equally, percent, c, plusMinus, point
     
+    
     // MARK: - systemName
     var systemName: String {
         switch self {
