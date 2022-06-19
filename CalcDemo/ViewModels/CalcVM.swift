@@ -9,7 +9,14 @@ import Foundation
 
 
 class CalcVM: ObservableObject {
-    @Published var numberField = "0"
+    @Published var numberField = "0" {
+        didSet {
+            if numberField.isEmpty {
+                numberField = oldValue
+            }
+        }
+    }
+    
     private var runningNumber = 0
     private var currentOperation: Operations = .none
     
