@@ -67,6 +67,8 @@ enum NumPad: CaseIterable {
         [.seven, .eight,     .nine,    .multiply],
         [.four,  .five,      .six,     .minus],
         [.one,   .two,       .three,   .plus],
-        [.zero,  .point,     .remove,   .equally]
+        [.zero,  .point,     .remove,  .equally]
     ]
+    
+    
 }

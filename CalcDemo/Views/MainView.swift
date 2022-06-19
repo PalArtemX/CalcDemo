@@ -16,7 +16,7 @@ struct MainView: View {
             
             VStack {
                 Spacer()
-                
+                // MARK: - NumPadView
                 NumPadView()
             }
             .padding(.vertical)

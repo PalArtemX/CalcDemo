@@ -22,7 +22,7 @@ struct NumButtonView: View {
         }
     }
     
-    init(num numpad: NumPad, action: @escaping () -> Void) {
+    init(symbol numpad: NumPad, action: @escaping () -> Void) {
         self.numpad = numpad
         self.action = action
     }
@@ -57,10 +57,10 @@ struct NumButtonView_Previews: PreviewProvider {
             Color.colorTheme.background
                 .ignoresSafeArea()
             VStack {
-                NumButtonView(num: .one, action: {})
-                NumButtonView(num: .plus, action: {})
-                NumButtonView(num: .c, action: {})
-                NumButtonView(num: .remove, action: {})
+                NumButtonView(symbol: .one, action: {})
+                NumButtonView(symbol: .plus, action: {})
+                NumButtonView(symbol: .c, action: {})
+                NumButtonView(symbol: .remove, action: {})
             }
         }
     }
