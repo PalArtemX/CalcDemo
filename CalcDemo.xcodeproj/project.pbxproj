@@ -15,6 +15,8 @@
 		F86C272A285F2913001689A8 /* NumPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C2729285F2913001689A8 /* NumPadView.swift */; };
 		F86C272D285F2986001689A8 /* NumButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C272C285F2986001689A8 /* NumButtonView.swift */; };
 		F86C272F285F29F9001689A8 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C272E285F29F8001689A8 /* ColorExtension.swift */; };
+		F86C2731285F530E001689A8 /* NumberFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C2730285F530E001689A8 /* NumberFieldView.swift */; };
+		F87807A8285F94220057878C /* CalcVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87807A7285F94220057878C /* CalcVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		F86C2729285F2913001689A8 /* NumPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumPadView.swift; sourceTree = "<group>"; };
 		F86C272C285F2986001689A8 /* NumButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumButtonView.swift; sourceTree = "<group>"; };
 		F86C272E285F29F8001689A8 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		F86C2730285F530E001689A8 /* NumberFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFieldView.swift; sourceTree = "<group>"; };
+		F87807A7285F94220057878C /* CalcVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		F86C2723285E91CE001689A8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F87807A7285F94220057878C /* CalcVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			children = (
 				F86C2727285F28FF001689A8 /* MainView.swift */,
 				F86C2729285F2913001689A8 /* NumPadView.swift */,
+				F86C2730285F530E001689A8 /* NumberFieldView.swift */,
 				F86C272B285F2966001689A8 /* Components */,
 			);
 			path = Views;
@@ -192,7 +198,9 @@
 				F86C2726285F287D001689A8 /* NumPad.swift in Sources */,
 				F86C272D285F2986001689A8 /* NumButtonView.swift in Sources */,
 				F86C2728285F28FF001689A8 /* MainView.swift in Sources */,
+				F86C2731285F530E001689A8 /* NumberFieldView.swift in Sources */,
 				F86C272F285F29F9001689A8 /* ColorExtension.swift in Sources */,
+				F87807A8285F94220057878C /* CalcVM.swift in Sources */,
 				F86C272A285F2913001689A8 /* NumPadView.swift in Sources */,
 				F86C2714285E91A5001689A8 /* CalcDemoApp.swift in Sources */,
 			);

@@ -16,6 +16,10 @@ struct MainView: View {
             
             VStack {
                 Spacer()
+                // MARK: - NumberFieldView
+                NumberFieldView()
+                    .padding(.vertical)
+                
                 // MARK: - NumPadView
                 NumPadView()
             }
@@ -36,5 +40,6 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .environmentObject(CalcVM())
     }
 }

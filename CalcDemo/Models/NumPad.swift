@@ -8,10 +8,10 @@
 import Foundation
 
 
-enum NumPad: CaseIterable {
-    case one, two, three, four, five, six, seven, eight, nine, zero
-    case plus, minus, multiply, divide
-    case equally, percent, c, plusMinus, point, remove
+enum NumPad: String, CaseIterable {
+    case one = "1", two = "2", three = "3", four = "4", five = "5", six = "6", seven = "7", eight = "8", nine = "9", zero = "0"
+    case plus = "+", minus = "-", multiply = "*", divide = "/"
+    case equally = "=", percent = "%", c = "c", plusMinus = "+/-", point = ".", remove = "remove"
     
     
     // MARK: - systemName

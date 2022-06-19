@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct NumPadView: View {
+    @EnvironmentObject var calcVM: CalcVM
+    
     var body: some View {
         Grid(horizontalSpacing: 15, verticalSpacing: 15) {
             
@@ -15,8 +17,8 @@ struct NumPadView: View {
                 GridRow {
                     ForEach(rows, id: \.self) { symbol in
                         NumButtonView(symbol: symbol) {
+                            calcVM.didTap(symbol: symbol)
                             print("🔘 Press >> |\(symbol)|")
-                            // FIXME: Add Action
                         }
                     }
                 }
@@ -38,5 +40,6 @@ struct NumPadView: View {
 struct NumPadView_Previews: PreviewProvider {
     static var previews: some View {
         NumPadView()
+            .environmentObject(CalcVM())
     }
 }
