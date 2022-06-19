@@ -9,7 +9,7 @@ import Foundation
 
 
 enum NumPad: CaseIterable {
-    case one, two, three, four, five, six, seven, eight, nine, zero
+    case one, two, three, four, five, six, seven, eight, nine, zero, remove
     case plus, minus, multiply, divide
     case equally, percent, c, plusMinus, point
     
@@ -55,6 +55,8 @@ enum NumPad: CaseIterable {
             return "plusminus.circle"
         case .point:
             return "record.circle"
+        case .remove:
+            return "arrow.left.circle"
         }
     }
     
@@ -65,6 +67,6 @@ enum NumPad: CaseIterable {
         [.seven, .eight,     .nine,    .multiply],
         [.four,  .five,      .six,     .minus],
         [.one,   .two,       .three,   .plus],
-        [.zero,  .point,               .equally]
+        [.zero,  .point,     .remove,   .equally]
     ]
 }

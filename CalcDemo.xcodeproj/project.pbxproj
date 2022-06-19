@@ -13,6 +13,8 @@
 		F86C2726285F287D001689A8 /* NumPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C2725285F287D001689A8 /* NumPad.swift */; };
 		F86C2728285F28FF001689A8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C2727285F28FF001689A8 /* MainView.swift */; };
 		F86C272A285F2913001689A8 /* NumPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C2729285F2913001689A8 /* NumPadView.swift */; };
+		F86C272D285F2986001689A8 /* NumButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C272C285F2986001689A8 /* NumButtonView.swift */; };
+		F86C272F285F29F9001689A8 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C272E285F29F8001689A8 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		F86C2725285F287D001689A8 /* NumPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumPad.swift; sourceTree = "<group>"; };
 		F86C2727285F28FF001689A8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F86C2729285F2913001689A8 /* NumPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumPadView.swift; sourceTree = "<group>"; };
+		F86C272C285F2986001689A8 /* NumButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumButtonView.swift; sourceTree = "<group>"; };
+		F86C272E285F29F8001689A8 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		F86C2721285E91C2001689A8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F86C272E285F29F8001689A8 /* ColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -101,8 +106,17 @@
 			children = (
 				F86C2727285F28FF001689A8 /* MainView.swift */,
 				F86C2729285F2913001689A8 /* NumPadView.swift */,
+				F86C272B285F2966001689A8 /* Components */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F86C272B285F2966001689A8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F86C272C285F2986001689A8 /* NumButtonView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +190,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F86C2726285F287D001689A8 /* NumPad.swift in Sources */,
+				F86C272D285F2986001689A8 /* NumButtonView.swift in Sources */,
 				F86C2728285F28FF001689A8 /* MainView.swift in Sources */,
+				F86C272F285F29F9001689A8 /* ColorExtension.swift in Sources */,
 				F86C272A285F2913001689A8 /* NumPadView.swift in Sources */,
 				F86C2714285E91A5001689A8 /* CalcDemoApp.swift in Sources */,
 			);
