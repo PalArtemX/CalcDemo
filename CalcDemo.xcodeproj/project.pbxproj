@@ -11,6 +11,7 @@
 		F86C2716285E91A5001689A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C2715285E91A5001689A8 /* ContentView.swift */; };
 		F86C2718285E91A5001689A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86C2717285E91A5001689A8 /* Assets.xcassets */; };
 		F86C271B285E91A5001689A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86C271A285E91A5001689A8 /* Preview Assets.xcassets */; };
+		F86C2726285F287D001689A8 /* NumPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C2725285F287D001689A8 /* NumPad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		F86C2715285E91A5001689A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F86C2717285E91A5001689A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F86C271A285E91A5001689A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F86C2725285F287D001689A8 /* NumPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumPad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		F86C2722285E91C9001689A8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F86C2725285F287D001689A8 /* NumPad.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F86C2726285F287D001689A8 /* NumPad.swift in Sources */,
 				F86C2716285E91A5001689A8 /* ContentView.swift in Sources */,
 				F86C2714285E91A5001689A8 /* CalcDemoApp.swift in Sources */,
 			);
