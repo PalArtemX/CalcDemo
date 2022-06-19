@@ -9,7 +9,17 @@ import SwiftUI
 
 struct NumPadView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Grid(horizontalSpacing: 15, verticalSpacing: 15) {
+            ForEach(NumPad.grid, id: \.self) { numes in
+                GridRow {
+                    ForEach(numes, id: \.self) { num in
+                        NumButtonView(num: num) {
+                            print("🔘 Press >> |\(num)|")
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
