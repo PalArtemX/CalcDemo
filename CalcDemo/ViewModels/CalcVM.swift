@@ -10,31 +10,26 @@ import Foundation
 
 class CalcVM: ObservableObject {
     @Published var numberField = "0"
-    var runningNumber = 0
-    var currentOperation: Operations = .none
+    private var runningNumber = 0
+    private var currentOperation: Operations = .none
+    
+    
     
     // MARK: - Functions
-    
+    // MARK: didTap
     func didTap(symbol numPad: NumPad) {
         switch numPad {
         case .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .zero:
             numberCase(numPad: numPad)
-            
         case .plus, .minus, .multiply, .divide, .equal:
             operationCase(numPad: numPad)
-            
         case .point, .plusMinus, .percent:
             break
-            
         case .c:
-            
             numberField = "0"
-            
-        default:
-            break
+        case .remove:
+            numberField.removeLast()
         }
-    
-        
     }
     
     // MARK: numberCase
@@ -77,10 +72,12 @@ class CalcVM: ObservableObject {
             case .none:
                 break
             }
+            print("🟢 Equal >> |\(numberField)|")
         default: break
         }
         if numPad != .equal {
             numberField = "0"
         }
     }
+    
 }
