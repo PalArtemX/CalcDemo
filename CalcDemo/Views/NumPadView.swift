@@ -16,6 +16,7 @@ struct NumPadView: View {
                     ForEach(rows, id: \.self) { symbol in
                         NumButtonView(symbol: symbol) {
                             print("🔘 Press >> |\(symbol)|")
+                            // FIXME: Added Action
                         }
                     }
                 }

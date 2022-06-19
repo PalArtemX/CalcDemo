@@ -9,9 +9,9 @@ import Foundation
 
 
 enum NumPad: CaseIterable {
-    case one, two, three, four, five, six, seven, eight, nine, zero, remove
+    case one, two, three, four, five, six, seven, eight, nine, zero
     case plus, minus, multiply, divide
-    case equally, percent, c, plusMinus, point
+    case equally, percent, c, plusMinus, point, remove
     
     
     // MARK: - systemName
