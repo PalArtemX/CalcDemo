@@ -21,7 +21,7 @@ struct NumberFieldView: View {
                 .padding(.horizontal)
         }
         .frame(maxWidth: .infinity)
-        .background(Color.gray.gradient.opacity(0.05))
+        .background(Color.colorTheme.operators.gradient.opacity(0.1))
     }
 }
 

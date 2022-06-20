@@ -9,7 +9,7 @@ import Foundation
 
 
 class CalcVM: ObservableObject {
-    @Published var numberField = "0" {
+    @Published private(set) var numberField = "0" {
         didSet {
             if numberField.isEmpty {
                 numberField = oldValue
@@ -17,7 +17,7 @@ class CalcVM: ObservableObject {
         }
     }
     
-    private var runningNumber = 0
+    private var runningNumber: Double = 0
     private var currentOperation: Operations = .none
     
     
@@ -31,7 +31,7 @@ class CalcVM: ObservableObject {
         case .plus, .minus, .multiply, .divide, .equal:
             operationCase(numPad: numPad)
         case .point, .plusMinus, .percent:
-            break
+            functionalCase(numPad: numPad)
         case .c:
             numberField = "0"
         case .remove:
@@ -54,19 +54,19 @@ class CalcVM: ObservableObject {
         switch numPad {
         case .plus:
             currentOperation = .plus
-            runningNumber = Int(numberField) ?? 0
+            runningNumber = Double(numberField) ?? 0
         case .minus:
             currentOperation = .minus
-            runningNumber = Int(numberField) ?? 0
+            runningNumber = Double(numberField) ?? 0
         case .multiply:
             currentOperation = .multiply
-            runningNumber = Int(numberField) ?? 0
+            runningNumber = Double(numberField) ?? 0
         case .divide:
             currentOperation = .divide
-            runningNumber = Int(numberField) ?? 0
+            runningNumber = Double(numberField) ?? 0
         case .equal:
             let runningValue = runningNumber
-            let currentValue = Int(numberField) ?? 0
+            let currentValue = Double(numberField) ?? 0
             switch currentOperation {
             case .plus:
                 numberField = "\(runningValue + currentValue)"
@@ -87,4 +87,23 @@ class CalcVM: ObservableObject {
         }
     }
     
+    
+    // MARK: functionalCase
+    private func functionalCase(numPad: NumPad) {
+        switch numPad {
+        case .point:
+            numberField.append(".")
+        case .plusMinus:
+            
+            if numberField[numberField.startIndex] == "-" {
+                numberField.removeFirst()
+            } else {
+                numberField.insert("-", at: numberField.startIndex)
+            }
+        case .percent:
+            break
+        default:
+            break
+        }
+    }
 }
