@@ -10,7 +10,7 @@ import SwiftUI
 struct ResultsView: View {
     @EnvironmentObject var calcVM: CalcVM
     
-    var curentOperator: String {
+    var currentOperator: String {
         switch calcVM.currentOperation {
         case .plus:
             return "+"
@@ -21,23 +21,43 @@ struct ResultsView: View {
         case .divide:
             return "/"
         case .none:
-            return ""
+            return "|"
         }
     }
     
     var body: some View {
+        
         HStack(spacing: 10.0) {
-            if let first = calcVM.firstNumber, let second = calcVM.secondNumber {
+            
+            if let first = calcVM.firstNumber {
                 Text(first.formatted())
-                Text(curentOperator)
+            } else {
+                Text("x")
+                    .opacity(0.5)
+            }
+            
+            Text(currentOperator)
+            
+            if let second = calcVM.secondNumber {
                 Text(second.formatted())
-                Text(" = ")
+            } else {
+                Text("y")
+                    .opacity(0.5)
+            }
+            
+            Text(" = ")
+            
+            if calcVM.showEqualResult {
                 Text(Double(calcVM.numberField)?.formatted() ?? "")
                     .fontWeight(.semibold)
+            } else {
+                Text("result")
+                    .fontWeight(.semibold)
+                    .opacity(0.5)
             }
+            
         }
-
-        .animation(.easeInOut, value: calcVM.numberField)
+        .padding()
         .font(.title2)
         .foregroundColor(.colorTheme.number)
     }

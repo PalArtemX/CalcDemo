@@ -17,8 +17,9 @@ class CalcVM: ObservableObject {
         }
     }
     
-    @Published var firstNumber: Double?
-    @Published var secondNumber: Double?
+    @Published private(set) var showEqualResult = false
+    @Published private(set) var firstNumber: Double?
+    @Published private(set) var secondNumber: Double?
     
     private var runningNumber: Double = 0
     private(set) var currentOperation: Operations = .none
@@ -36,11 +37,9 @@ class CalcVM: ObservableObject {
         case .point, .plusMinus, .percent:
             functionalCase(numPad: numPad)
         case .c:
-            numberField = "0"
-            removeLastAndFirstNumbers()
+            clear()
         case .remove:
             numberField.removeLast()
-            removeLastAndFirstNumbers()
         }
     }
     
@@ -60,19 +59,22 @@ class CalcVM: ObservableObject {
         case .plus:
             currentOperation = .plus
             runningNumber = Double(numberField) ?? 0
+            firstNumber = runningNumber
         case .minus:
             currentOperation = .minus
             runningNumber = Double(numberField) ?? 0
+            firstNumber = runningNumber
         case .multiply:
             currentOperation = .multiply
             runningNumber = Double(numberField) ?? 0
+            firstNumber = runningNumber
         case .divide:
             currentOperation = .divide
             runningNumber = Double(numberField) ?? 0
+            firstNumber = runningNumber
         case .equal:
             let runningValue = runningNumber
             let currentValue = Double(numberField) ?? 0
-            firstNumber = runningValue
             secondNumber = currentValue
             switch currentOperation {
             case .plus:
@@ -87,13 +89,14 @@ class CalcVM: ObservableObject {
                 break
             }
             print("🟢 Equal >> |\(numberField)|")
+            showEqualResult = true
+            
         default: break
         }
         if numPad != .equal {
             numberField = "0"
         }
     }
-    
     
     // MARK: functionalCase
     private func functionalCase(numPad: NumPad) {
@@ -114,9 +117,13 @@ class CalcVM: ObservableObject {
         }
     }
     
-    // MARK: removeLastAndFirstNumbers
-    private func removeLastAndFirstNumbers() {
+    // MARK: clear
+    private func clear() {
+        numberField = "0"
+        currentOperation = .none
         secondNumber = nil
         firstNumber = nil
+        showEqualResult = false
     }
+    
 }
