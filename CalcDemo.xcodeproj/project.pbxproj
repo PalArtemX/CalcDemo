@@ -18,6 +18,7 @@
 		F86C2731285F530E001689A8 /* NumberFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86C2730285F530E001689A8 /* NumberFieldView.swift */; };
 		F87807A8285F94220057878C /* CalcVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87807A7285F94220057878C /* CalcVM.swift */; };
 		F87807AA285F99970057878C /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87807A9285F99970057878C /* Operations.swift */; };
+		F87807AC286090510057878C /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87807AB286090510057878C /* ResultsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		F86C2730285F530E001689A8 /* NumberFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFieldView.swift; sourceTree = "<group>"; };
 		F87807A7285F94220057878C /* CalcVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcVM.swift; sourceTree = "<group>"; };
 		F87807A9285F99970057878C /* Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
+		F87807AB286090510057878C /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				F86C2727285F28FF001689A8 /* MainView.swift */,
 				F86C2729285F2913001689A8 /* NumPadView.swift */,
 				F86C2730285F530E001689A8 /* NumberFieldView.swift */,
+				F87807AB286090510057878C /* ResultsView.swift */,
 				F86C272B285F2966001689A8 /* Components */,
 			);
 			path = Views;
@@ -201,6 +204,7 @@
 				F87807AA285F99970057878C /* Operations.swift in Sources */,
 				F86C2726285F287D001689A8 /* NumPad.swift in Sources */,
 				F86C272D285F2986001689A8 /* NumButtonView.swift in Sources */,
+				F87807AC286090510057878C /* ResultsView.swift in Sources */,
 				F86C2728285F28FF001689A8 /* MainView.swift in Sources */,
 				F86C2731285F530E001689A8 /* NumberFieldView.swift in Sources */,
 				F86C272F285F29F9001689A8 /* ColorExtension.swift in Sources */,

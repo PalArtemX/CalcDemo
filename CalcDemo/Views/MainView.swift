@@ -15,6 +15,7 @@ struct MainView: View {
                 .ignoresSafeArea()
             
             VStack {
+                ResultsView()
                 Spacer()
                 // MARK: - NumberFieldView
                 NumberFieldView()

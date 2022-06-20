@@ -17,8 +17,11 @@ class CalcVM: ObservableObject {
         }
     }
     
+    @Published var firstNumber: Double?
+    @Published var secondNumber: Double?
+    
     private var runningNumber: Double = 0
-    private var currentOperation: Operations = .none
+    private(set) var currentOperation: Operations = .none
     
     
     
@@ -34,8 +37,10 @@ class CalcVM: ObservableObject {
             functionalCase(numPad: numPad)
         case .c:
             numberField = "0"
+            removeLastAndFirstNumbers()
         case .remove:
             numberField.removeLast()
+            removeLastAndFirstNumbers()
         }
     }
     
@@ -67,6 +72,8 @@ class CalcVM: ObservableObject {
         case .equal:
             let runningValue = runningNumber
             let currentValue = Double(numberField) ?? 0
+            firstNumber = runningValue
+            secondNumber = currentValue
             switch currentOperation {
             case .plus:
                 numberField = "\(runningValue + currentValue)"
@@ -105,5 +112,11 @@ class CalcVM: ObservableObject {
         default:
             break
         }
+    }
+    
+    // MARK: removeLastAndFirstNumbers
+    private func removeLastAndFirstNumbers() {
+        secondNumber = nil
+        firstNumber = nil
     }
 }
