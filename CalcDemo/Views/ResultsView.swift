@@ -26,20 +26,20 @@ struct ResultsView: View {
     }
     
     var body: some View {
-        HStack {
+        HStack(spacing: 10.0) {
             if let first = calcVM.firstNumber, let second = calcVM.secondNumber {
-                Text("\(first)")
+                Text(first.formatted())
                 Text(curentOperator)
-                Text("\(second)")
-                
-                Text("=")
-                Text(calcVM.numberField)
+                Text(second.formatted())
+                Text(" = ")
+                Text(Double(calcVM.numberField)?.formatted() ?? "")
+                    .fontWeight(.semibold)
             }
-           
-            
-            
-            
         }
+
+        .animation(.easeInOut, value: calcVM.numberField)
+        .font(.title2)
+        .foregroundColor(.colorTheme.number)
     }
 }
 
