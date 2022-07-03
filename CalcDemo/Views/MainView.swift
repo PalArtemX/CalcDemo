@@ -15,6 +15,7 @@ struct MainView: View {
             
             VStack {
                 ResultsView()
+                
                 Spacer()
                 
                 NumberFieldView()

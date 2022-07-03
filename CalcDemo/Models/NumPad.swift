@@ -13,7 +13,6 @@ enum NumPad: String, CaseIterable {
     case plus = "+", minus = "-", multiply = "*", divide = "/"
     case equal = "=", percent = "%", c = "c", plusMinus = "+/-", point = ".", remove = "remove"
     
-    
     var systemName: String {
         switch self {
         case .one:

@@ -19,7 +19,7 @@ struct NumPadView: View {
                         
                         NumButtonView(symbol: symbol) {
                             calcVM.didTap(symbol: symbol)
-                            print("🔘 Press >> |\(symbol)|")
+                            print("🔘 Tap >> |\(symbol)|")
                         }
                         
                     }

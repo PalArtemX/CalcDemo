@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ResultsView: View {
     @EnvironmentObject var calcVM: CalcVM
+    
     var currentOperator: String {
         switch calcVM.currentOperation {
         case .plus:

@@ -20,9 +20,9 @@ class CalcVM: ObservableObject {
     @Published private(set) var showEqualResult = false
     @Published private(set) var firstNumber: Double?
     @Published private(set) var secondNumber: Double?
+    
     private var runningNumber: Double = 0
     private(set) var currentOperation: Operations = .none
-    
     
     // MARK: - Functions
     
@@ -43,6 +43,7 @@ class CalcVM: ObservableObject {
     
     private func numberCase(numPad: NumPad) {
         let number = numPad.rawValue
+        
         if numberField == "0" {
             numberField = number
         } else {
@@ -72,6 +73,7 @@ class CalcVM: ObservableObject {
             let runningValue = runningNumber
             let currentValue = Double(numberField) ?? 0
             secondNumber = currentValue
+            
             switch currentOperation {
             case .plus:
                 numberField = "\(runningValue + currentValue)"
@@ -84,11 +86,13 @@ class CalcVM: ObservableObject {
             case .none:
                 break
             }
+            
             print("🟢 Equal >> |\(numberField)|")
             showEqualResult = true
-            
-        default: break
+        default:
+            break
         }
+        
         if numPad != .equal {
             numberField = "0"
         }
@@ -99,7 +103,6 @@ class CalcVM: ObservableObject {
         case .point:
             numberField.append(".")
         case .plusMinus:
-            
             if numberField[numberField.startIndex] == "-" {
                 numberField.removeFirst()
             } else {
