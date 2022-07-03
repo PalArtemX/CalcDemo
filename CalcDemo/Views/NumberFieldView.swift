@@ -13,6 +13,7 @@ struct NumberFieldView: View {
     var body: some View {
         HStack {
             Spacer()
+            
             Text(Double(calcVM.numberField)?.formatted() ?? "0")
                 .font(.largeTitle)
                 .fontWeight(.semibold)

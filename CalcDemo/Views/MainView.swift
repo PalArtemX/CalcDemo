@@ -10,18 +10,16 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         ZStack {
-            // MARK: - Background
             Color.colorTheme.background
                 .ignoresSafeArea()
             
             VStack {
                 ResultsView()
                 Spacer()
-                // MARK: - NumberFieldView
+                
                 NumberFieldView()
                     .padding(.vertical)
                 
-                // MARK: - NumPadView
                 NumPadView()
             }
             .padding(.vertical)

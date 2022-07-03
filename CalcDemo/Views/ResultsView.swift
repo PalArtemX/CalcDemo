@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ResultsView: View {
     @EnvironmentObject var calcVM: CalcVM
-    
     var currentOperator: String {
         switch calcVM.currentOperation {
         case .plus:
@@ -26,9 +25,7 @@ struct ResultsView: View {
     }
     
     var body: some View {
-        
         HStack(spacing: 10.0) {
-            
             if let first = calcVM.firstNumber {
                 Text(first.formatted())
             } else {
@@ -55,7 +52,6 @@ struct ResultsView: View {
                     .fontWeight(.semibold)
                     .opacity(0.5)
             }
-            
         }
         .padding()
         .font(.title2)

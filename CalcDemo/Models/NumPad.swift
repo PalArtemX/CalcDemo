@@ -14,7 +14,6 @@ enum NumPad: String, CaseIterable {
     case equal = "=", percent = "%", c = "c", plusMinus = "+/-", point = ".", remove = "remove"
     
     
-    // MARK: - systemName
     var systemName: String {
         switch self {
         case .one:
@@ -60,8 +59,6 @@ enum NumPad: String, CaseIterable {
         }
     }
     
-    
-    // MARK: - grid
     static let grid: [[NumPad]] = [
         [.c,     .plusMinus, .percent, .divide],
         [.seven, .eight,     .nine,    .multiply],
@@ -69,6 +66,5 @@ enum NumPad: String, CaseIterable {
         [.one,   .two,       .three,   .plus],
         [.zero,  .point,     .remove,  .equal]
     ]
-    
-    
+
 }

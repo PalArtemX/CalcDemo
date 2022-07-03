@@ -20,14 +20,12 @@ class CalcVM: ObservableObject {
     @Published private(set) var showEqualResult = false
     @Published private(set) var firstNumber: Double?
     @Published private(set) var secondNumber: Double?
-    
     private var runningNumber: Double = 0
     private(set) var currentOperation: Operations = .none
     
     
-    
     // MARK: - Functions
-    // MARK: didTap
+    
     func didTap(symbol numPad: NumPad) {
         switch numPad {
         case .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .zero:
@@ -43,7 +41,6 @@ class CalcVM: ObservableObject {
         }
     }
     
-    // MARK: numberCase
     private func numberCase(numPad: NumPad) {
         let number = numPad.rawValue
         if numberField == "0" {
@@ -53,7 +50,6 @@ class CalcVM: ObservableObject {
         }
     }
     
-    // MARK: operationCase
     private func operationCase(numPad: NumPad) {
         switch numPad {
         case .plus:
@@ -98,7 +94,6 @@ class CalcVM: ObservableObject {
         }
     }
     
-    // MARK: functionalCase
     private func functionalCase(numPad: NumPad) {
         switch numPad {
         case .point:
@@ -117,7 +112,6 @@ class CalcVM: ObservableObject {
         }
     }
     
-    // MARK: clear
     private func clear() {
         numberField = "0"
         currentOperation = .none

@@ -10,7 +10,6 @@ import SwiftUI
 struct NumButtonView: View {
     let numpad: NumPad
     let action: () -> ()
-    
     var color: Color {
         switch numpad {
         case .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .zero, .point, .remove:
