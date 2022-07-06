@@ -10,9 +10,9 @@ import Foundation
 
 class CalcVM: ObservableObject {
     @Published private(set) var numberField = "0" {
-        didSet {
-            if numberField.isEmpty {
-                numberField = oldValue
+        willSet {
+            if newValue.isEmpty {
+                numberField = "0"
             }
         }
     }
@@ -35,9 +35,9 @@ class CalcVM: ObservableObject {
         case .point, .plusMinus, .percent:
             functionalCase(numPad: numPad)
         case .c:
-            clear()
+            clearCase()
         case .remove:
-            numberField.removeLast()
+            removeLastCase()
         }
     }
     
@@ -115,7 +115,7 @@ class CalcVM: ObservableObject {
         }
     }
     
-    private func clear() {
+    private func clearCase() {
         numberField = "0"
         currentOperation = .none
         secondNumber = nil
@@ -123,4 +123,9 @@ class CalcVM: ObservableObject {
         showEqualResult = false
     }
     
+    private func removeLastCase() {
+        if !numberField.isEmpty {
+            numberField.removeLast()
+        }
+    }
 }

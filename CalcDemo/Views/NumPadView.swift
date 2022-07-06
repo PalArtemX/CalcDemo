@@ -16,12 +16,10 @@ struct NumPadView: View {
                 
                 GridRow {
                     ForEach(rows, id: \.self) { symbol in
-                        
                         NumButtonView(symbol: symbol) {
                             calcVM.didTap(symbol: symbol)
                             print("🔘 Tap >> |\(symbol)|")
                         }
-                        
                     }
                 }
                 
