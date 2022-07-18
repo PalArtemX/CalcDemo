@@ -24,8 +24,11 @@ class CalcVM: ObservableObject {
     private var runningNumber: Double = 0
     private(set) var currentOperation: Operations = .none
     
-    // MARK: - Functions
     
+    // MARK: - FUNCTIONS
+    
+    /// The function is called when the button is pressed, depending on the passed parameter, the actions differ
+    /// - Parameter numPad: The symbol is passed from enum NumPad
     func didTap(symbol numPad: NumPad) {
         switch numPad {
         case .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .zero:

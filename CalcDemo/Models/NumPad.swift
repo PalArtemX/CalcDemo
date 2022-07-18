@@ -58,6 +58,7 @@ enum NumPad: String, CaseIterable {
         }
     }
     
+    /// The grid is a two-dimensional array, with an enum NumPad
     static let grid: [[NumPad]] = [
         [.c,     .plusMinus, .percent, .divide],
         [.seven, .eight,     .nine,    .multiply],
